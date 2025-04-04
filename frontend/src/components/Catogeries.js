@@ -6,7 +6,7 @@ const Categories = () => {
 
     return (
         <div className="container mt-4">
-            <h2 className="text-center mb-5 fw-bold">✨ Explore Our Collections ✨</h2>
+            <h6 className="text-center mb-5 text-secondary display-6"> Explore Our Collections </h6>
             {loading && <p className="text-center">Loading...</p>}
             {error && <p className="text-center">Error while fetching data.</p>}
 

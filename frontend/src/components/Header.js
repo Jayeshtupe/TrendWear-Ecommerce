@@ -2,9 +2,9 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import {FaRegHeart,} from "react-icons/fa";
 import { CgProfile } from "react-icons/cg";
 import { MdOutlineShoppingCart } from "react-icons/md";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useState } from "react";
-import {Navigate} from "react-router-dom"
+import {useNavigate} from "react-router-dom"
 
 function Header() {
   const [cartCount, setCartCount] = useState(0)
@@ -13,9 +13,8 @@ function Header() {
   const navigate = useNavigate()
 
   const handleSearch = (e) => {
-    e.preventDefault()
-    if(searchQuery.trim() !== "") {
-      navigate(`/products?q=${searchQuery}`)
+    if(e.key === "Enter" && searchQuery.trim() !== "") {
+      navigate(`/allproducts?search=${encodeURIComponent(searchQuery)}`)
     }
   }
 
@@ -24,14 +23,12 @@ function Header() {
       <nav className=" navbar bg-body-tertiary">
        <div className="container container-fluid d-flex justify-content-between align-items-center">
           <Link to="/" className="navbar-brand">
-            <img src="/logo.jpg"/>
+            <img src="/logo.png"/>
           </Link>
 
-     <form onSubmit={handleSearch}>
-         <div className="d-flex flex-grow-1 justify-content-center">
-      <input className="form-control" type="search" placeholder="Search products" aria-label="Search" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)}/>
-  </div>
-  </form>
+     <div>
+      <input type="text" className="form-control me-2" placeholder="Search for products..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} onKeyDown={handleSearch}/>
+     </div>
 
   <div className="d-flex align-item-center gap-4">
 

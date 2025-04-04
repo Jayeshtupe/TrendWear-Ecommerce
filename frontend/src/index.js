@@ -7,8 +7,9 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import App from './App';
 // import Categories from './components/Catogeries';
-import Products from './pages/Products';
+import CategoryProducts from './pages/CategoryProducts';
 import ProductDetails from './pages/ProductDetails';
+import AllProducts from './pages/AllProducts';
 import WishList from './pages/WishList';
 import Cart from './pages/Cart';
 import UserProfile from './pages/UserProfile';
@@ -21,8 +22,12 @@ const router = createBrowserRouter([
   element: <App/>
 },
 {
+  path: "/allproducts",
+  element: <AllProducts/>
+},
+{
   path: "category/:categoryName",
-  element: <Products/>
+  element: <CategoryProducts/>
 },
 {
   path: "productDetails/:productId",

@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 const UserProfile = () => {
     const user = {
@@ -83,10 +84,10 @@ const UserProfile = () => {
     };
 
     return (
-        <div style={{ backgroundColor: "rgb(250, 248, 245)" }}>
+        <div>
             <Header />
             <div className="container mt-4">
-                <h2 className="text-center mb-4">User Profile</h2>
+                <h6 className="text-center mb-4 text-secondary display-6">User Profile</h6>
                 <div className="row">
                     <div className="col-md-4 mb-3">
                         <div className="card shadow p-4 align-items-center">
@@ -161,6 +162,7 @@ const UserProfile = () => {
                     </div>
                 )}
             </div>
+            <Footer/>
         </div>
     );
 };

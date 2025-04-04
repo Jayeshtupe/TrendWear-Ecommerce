@@ -1,4 +1,5 @@
 import Header from "../components/Header";
+import Footer from "../components/Footer"
 import { useEffect, useState } from "react";
 import { RxCross2 } from "react-icons/rx";
 import { Link } from "react-router-dom";
@@ -71,7 +72,7 @@ const Cart = () => {
         <div>
             <Header/>
             <div className="container my-4">
-            <h2 className="text-center mb-4 fw-bold">🛒 Shopping Cart</h2>
+            <h6 className="text-center mb-4 text-secondary display-6">🛒 Shopping Cart</h6>
             {loading && <p className="text-center">Loading...</p>}
             {error && <p className="text-danger text-center">{error}</p>}
 
@@ -130,7 +131,8 @@ const Cart = () => {
                 <p className="text-center">Your cart is empty 🛒</p>
             )}
         </div>
-        </div>
+        <Footer/>
+    </div>
     );
 };
 

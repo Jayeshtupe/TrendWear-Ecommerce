@@ -7,7 +7,7 @@ import { useLocation } from "react-router-dom";
 
 const CategoryProducts = () => {
     const { categoryName } = useParams();
-    const { data, loading, error } = useFetch("https://trendwear-backend.vercel.app/products");
+    const { data, loading, error } = useFetch("https://trendwear-backend.vercel.app/products"); 
     const location = useLocation()
     const queryParams = new URLSearchParams(location.search)
     const searchQuery = queryParams.get("q") || ""
@@ -186,7 +186,7 @@ const CategoryProducts = () => {
                 </div>
 
                 <div className="col-md-9 p-4">
-                    <h3 className="mb-3 fw-bold">{categoryName} Collection</h3>
+                    <h3 className="mb-3 text-secondary">{categoryName} Collection</h3>
                     {loading && <p className="text-center">Loading...</p>}
                     {error && <p className="text-danger text-center">Error while fetching data.</p>}
 

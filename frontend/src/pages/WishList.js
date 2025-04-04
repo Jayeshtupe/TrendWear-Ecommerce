@@ -1,4 +1,5 @@
 import Header from "../components/Header";
+import Footer from "../components/Footer"
 import useFetch from "../useFetch";
 import { RxCross2 } from "react-icons/rx";
 import { Badge } from "react-bootstrap";
@@ -59,8 +60,8 @@ const WishList = () => {
     return (
         <div>
             <Header />
-            <div className="container">
-                <h2 className="fw-bold text-center my-3">♡ My Wishlist</h2>
+            <div className="container mb-5">
+                <h6 className="text-secondary display-6 text-center my-3">♡ My Wishlist</h6>
                 {loading && <p className="text-center">Loading...</p>}
                 {error && <p className="text-danger text-center">Error while fetching data.</p>}
 
@@ -113,6 +114,7 @@ const WishList = () => {
                     )}
                 </div>
             </div>
+            <Footer/>
         </div>
     );
 };

@@ -13,7 +13,7 @@ const LatestProducts = () => {
     }, [])
     return (
         <div className="container my-5">
-            <h2 className="text-center fw-bold mb-3">New Arrivals</h2>
+            <h6 className="text-center text-secondary display-6 mb-3">New Arrivals</h6>
             <div className="row g-4 row row-cols-2 row-cols-md-4">
                 {latestProducts.map((product) => (
                     <div key={product.id} className="col">
