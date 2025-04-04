@@ -6,10 +6,10 @@ import Footer from "../components/Footer";
 
 const UserProfile = () => {
     const user = {
-        name: "John Smith",
-        email: "js@gmail.com",
-        phone: "+91 7490384947",
-        photo: "https://th.bing.com/th/id/R.92c2485c692827d59e5c62fe6a624027?rik=89juVirSIVxyVw&riu=http%3a%2f%2fbucks.happeningmag.com%2fwp-content%2fuploads%2f2017%2f04%2fMeghparaBucksHappeningPhoto-600x600.jpg&ehk=JMMoG6cLjEhQmpyFwSk2IkB6Ah7VPFR36ob39YHbd%2fs%3d&risl=&pid=ImgRaw&r=0"
+        name: "Jayesh Tupe",
+        email: "jayeshtupe7@gmail.com",
+        phone: "+91 8356874651",
+        photo: "profile.png"
     };
 
     const [addresses, setAddresses] = useState([]);
